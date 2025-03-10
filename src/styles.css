@@ -1,0 +1,183 @@
+/* Font & Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  /* Container */
+  .app {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .app:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Judul */
+  h1 {
+    color: #4a4a4a;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form Input */
+  .todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .todo-form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
+  }
+  
+  .todo-form input:focus {
+    border-color: #667eea;
+  }
+  
+  /* Tombol Tambah */
+  .todo-form button {
+    background: #32a852; /* Warna hijau sesuai permintaan */
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+  
+  .todo-form button:hover {
+    background: #2c8b45;
+  }
+  
+  /* Daftar To-Do */
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Item To-Do */
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+  .todo-item:hover {
+    background: #f5f5f5;
+    transform: scale(1.02);
+  }
+  
+  /* Teks To-Do */
+  .todo-item span {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s;
+  }
+  
+  /* Efek coret jika selesai */
+  .todo-item .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Checkbox */
+  .todo-item input[type="checkbox"] {
+    accent-color: #667eea;
+    cursor: pointer;
+  }
+  
+  /* Tombol Edit & Delete */
+  .todo-item button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s;
+  }
+  
+  .todo-item button:hover {
+    transform: scale(1.2);
+  }
+  
+  .todo-item .edit-btn {
+    color: #667eea;
+  }
+  
+  .todo-item .delete-btn {
+    color: #e63946;
+  }
+  
+  /* Input Edit */
+  .todo-item input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  /* --- Responsiveness (Mobile) --- */
+  @media (max-width: 480px) {
+    .todo-form {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .todo-form input {
+      width: 100%;
+      font-size: 16px;
+      padding: 14px;
+    }
+    
+    .todo-form button {
+      width: 100%;
+      font-size: 18px;
+      padding: 14px;
+    }
+    
+    .todo-item {
+      flex-direction: column;
+      gap: 8px;
+      padding: 14px;
+    }
+  
+    .todo-item span {
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    .todo-item button {
+      font-size: 18px;
+    }
+  }
+  
